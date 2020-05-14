@@ -33,9 +33,9 @@ endif
 
 function! s:undofile(cwd) "{{{1
   if exists('+shellslash') && !&shellslash
-    return substitute(a:cwd, '\', '%', 'g')
+    return substitute(a:cwd, '\', '_', 'g')
   else
-    return substitute(a:cwd, '/', '%', 'g')
+    return substitute(a:cwd, '/', '_', 'g')
   endif
 endfunction
 
